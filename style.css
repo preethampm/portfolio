@@ -1,0 +1,351 @@
+/* Basic Reset & Body Styling */
+:root {
+    --primary-color: #007bff; /* A nice blue for buttons/accents */
+    --text-color: #333;
+    --light-gray: #f8f8f8;
+    --dark-gray: #555;
+    --border-color: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Using the Google Font */
+    color: var(--text-color);
+    background-color: #fff; /* White background */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5em; /* Larger for hero section */
+    font-weight: 700;
+    margin-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    text-align: center; /* For section titles */
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--dark-gray); /* Darker color for logo */
+    text-decoration: none;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    font-weight: 500;
+    color: var(--dark-gray);
+    font-size: 1.05em;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px; /* Ample padding */
+    min-height: calc(100vh - 80px); /* Adjust based on navbar height */
+    gap: 80px; /* Space between content and graphic */
+    background-color: #fcfcfc; /* Slightly off-white for hero */
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.tagline-top {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.tagline-top .bullet {
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+
+.hero-content h1 {
+    font-size: 3.8em; /* Even larger for impact */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content .description {
+    font-size: 1.25em;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.button.primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: var(--dark-gray);
+    border: 2px solid var(--border-color);
+}
+
+.button.secondary:hover {
+    background-color: var(--light-gray);
+    border-color: var(--dark-gray);
+    color: var(--text-color);
+}
+
+.sub-description {
+    font-size: 0.9em;
+    color: var(--dark-gray);
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.hero-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px; /* Ensure graphic has space */
+}
+
+.placeholder-graphic {
+    width: 450px; /* Placeholder size */
+    height: 450px;
+    background-color: var(--light-gray); /* Visual placeholder */
+    border-radius: 15px; /* Softer edges */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    border: 1px dashed var(--border-color);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23e0e0e0" /><text x="50" y="55" font-family="sans-serif" font-size="12" fill="%23888" text-anchor="middle">Your 3D Graphic Here</text></svg>');
+    background-size: cover;
+}
+
+
+/* General Section Styling (for placeholders) */
+.section-placeholder {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-placeholder:nth-of-type(odd) {
+    background-color: var(--light-gray);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 30px;
+        gap: 50px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-content .description {
+        font-size: 1.1em;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-graphic {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .placeholder-graphic {
+        width: 300px;
+        height: 300px;
+    }
+
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .navbar nav ul {
+        display: none; /* Hide navigation on smaller screens for simplicity now */
+    }
+
+    .navbar .nav-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .logo a {
+        font-size: 1.5em;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content .description {
+        font-size: 1em;
+    }
+    .button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .button {
+        width: 100%;
+    }
+    .hero-section {
+        padding: 60px 20px;
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .placeholder-graphic {
+        width: 250px;
+        height: 250px;
+    }
+}
